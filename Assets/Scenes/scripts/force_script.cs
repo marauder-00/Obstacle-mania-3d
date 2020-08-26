@@ -9,11 +9,7 @@ public class force_script : MonoBehaviour
     public float forward=100f;
     public float backwards = -100f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-          
-    }
+    
 
     // Update is called once per frame
     void Update()

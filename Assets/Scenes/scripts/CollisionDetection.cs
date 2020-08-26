@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CollisionDetection : MonoBehaviour
 { public Collider ground;
+    bool once;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.tag == "Obstacle")
@@ -16,7 +17,12 @@ public class CollisionDetection : MonoBehaviour
 
         if (collision.collider.tag == "Finish")
         {
-
+            if (!once)
+            {
+                FindObjectOfType<GameManager>().Complete();
+                print("complete");
+                once = true;
+            }
         }
     }
 }

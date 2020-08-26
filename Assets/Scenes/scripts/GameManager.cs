@@ -7,16 +7,23 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public bool end = false;
+ 
+    public GameObject anim;
     public void EndGame()
     {
         if (end == false)
         {
             end = true;
             Debug.Log("Game Over");
-            //    Invoke("Restart", 2);
-            Invoke("Restart", 2.0f);   
+            
+            Invoke("Restart", 1.0f);   
         }
       
+    }
+    public void Complete()
+    {
+        anim.SetActive(true);
+ 
     }
     void Restart()
     {

@@ -12,4 +12,5 @@ public class Score : MonoBehaviour
     {
         score.text = (Player.position.z+71).ToString("0");
     }
+
 }
