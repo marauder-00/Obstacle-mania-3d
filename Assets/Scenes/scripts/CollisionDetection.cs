@@ -10,7 +10,13 @@ public class CollisionDetection : MonoBehaviour
         {
             GetComponent<force_script>().enabled = false;
             GetComponent<Horzontal_movement>().enabled = false;
-            Debug.Log("Game Over");
+            
+            FindObjectOfType<GameManager>().EndGame();
+        }
+
+        if (collision.collider.tag == "Finish")
+        {
+
         }
     }
 }
